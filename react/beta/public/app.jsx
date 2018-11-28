@@ -9,7 +9,10 @@ var Greeter = React.createClass({
   }
 });
 
+
+
 ReactDOM.render(
+  // we pass the var through React JSX
   <Greeter/>,
   document.getElementById('app')
 );
