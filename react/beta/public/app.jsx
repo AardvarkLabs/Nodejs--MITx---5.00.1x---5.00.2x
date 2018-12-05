@@ -1,3 +1,7 @@
+// All by Felipe Alfonso Gonzalez
+// f.alfonso.go@gmail.com 
+
+//component in React 
 var Greeter = React.createClass({
   // usage of Default props 
   getDefaultProps: function (){
@@ -6,18 +10,31 @@ var Greeter = React.createClass({
       message: 'Default message'
     };
   },
+  getInitialState: function () {
+     return {
+        name: this.props.name
+     };
+  },
   onButtonClick: function (e) {
         e.preventDefault();
 
         var name = this.refs.name.value;
+        //after to send the name as a var I clear the field
+        this.refs.name.value = '';
 
-        alert(name);
+
+
+        this.setState({
+          name: name
+        });
+
+       // alert(name);
 
   },
   render: function () {
 
     // usage of props
-    var name = this.props.name;
+    var name = this.state.name;
     var message = this.props.message;
   
     return (
