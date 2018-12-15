@@ -1,5 +1,43 @@
 // All by Felipe Alfonso Gonzalez
+// Software Craftsman 
 // f.alfonso.go@gmail.com 
+
+// variable to create a nested component : ->
+var GreeterMessage = React.createClass({
+   render: function () {
+     return (
+       <div>
+         <h1>Some H1</h1>
+         <p>Some paragraph</p>
+       </div>
+
+     );
+   }
+});
+
+var GreeterForm = React.createClass({
+  render: function () {
+    onFormSubmit: function (e) {
+      e.preventDefault();
+
+      var name = this.refs.name.value;
+
+
+
+      if (name.length > 0) {
+        this.refs.name.value = '';
+
+      }
+    },
+    return (
+      <form onSubmit={this.onFormSubmit}>
+      <input type="text" ref="name" />
+      <button>Set name</button>
+    </form>
+    );
+  }
+});
+
 
 //component in React 
 var Greeter = React.createClass({
@@ -18,16 +56,18 @@ var Greeter = React.createClass({
   onButtonClick: function (e) {
         e.preventDefault();
 
+        var nameRef = this.refs.name;
+
         var name = this.refs.name.value;
         //after to send the name as a var I clear the field
-        this.refs.name.value = '';
+        // this.refs.name.value = '';
+        nameRef.value = '';
 
-
-
-        this.setState({
-          name: name
-        });
-
+        if (typeof name == 'string' && name.length > 0) {
+           this.setState({
+             name: name
+           });
+        }
        // alert(name);
 
   },
@@ -42,10 +82,15 @@ var Greeter = React.createClass({
         <h1>Hello {name}!</h1>
         <p>{message + '!!'}</p>
 
-        <form onSubmit={this.onButtonClick}>
-          <input type="text" ref="name" />
-          <button>Set name</button>
-        </form>
+        
+        <GreeterMessage/>
+
+         <form onSubmit={this.onButtonClick}>
+      <input type="text" ref="name" />
+      <button>Set name</button>
+    </form>
+        <GreeterForm/>
+
       </div>
     );
  
