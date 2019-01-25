@@ -4,11 +4,17 @@
 
 // variable to create a nested component : ->
 var GreeterMessage = React.createClass({
+
+
+
    render: function () {
+    var name = this.props.name;
+   var message = this.props.message;
+  
      return (
        <div>
-         <h1>Some H1</h1>
-         <p>Some paragraph</p>
+         <h1>Hello {name}!!</h1>
+         <p>{message}</p>
        </div>
 
      );
@@ -16,8 +22,8 @@ var GreeterMessage = React.createClass({
 });
 
 var GreeterForm = React.createClass({
-  render: function () {
-    onFormSubmit: function (e) {
+
+    onFormSubmit: function  (e) {
       e.preventDefault();
 
       var name = this.refs.name.value;
@@ -26,9 +32,11 @@ var GreeterForm = React.createClass({
 
       if (name.length > 0) {
         this.refs.name.value = '';
-
+        this.props.onNewName(name);
       }
     },
+
+      render: function () {
     return (
       <form onSubmit={this.onFormSubmit}>
       <input type="text" ref="name" />
@@ -53,22 +61,10 @@ var Greeter = React.createClass({
         name: this.props.name
      };
   },
-  onButtonClick: function (e) {
-        e.preventDefault();
-
-        var nameRef = this.refs.name;
-
-        var name = this.refs.name.value;
-        //after to send the name as a var I clear the field
-        // this.refs.name.value = '';
-        nameRef.value = '';
-
-        if (typeof name == 'string' && name.length > 0) {
-           this.setState({
-             name: name
-           });
-        }
-       // alert(name);
+  handleNewName: function (name) {
+     this.setState({
+       name: name
+     });
 
   },
   render: function () {
@@ -83,13 +79,9 @@ var Greeter = React.createClass({
         <p>{message + '!!'}</p>
 
         
-        <GreeterMessage/>
-
-         <form onSubmit={this.onButtonClick}>
-      <input type="text" ref="name" />
-      <button>Set name</button>
-    </form>
-        <GreeterForm/>
+        <GreeterMessage name={name} message={message}/>
+        <GreeterForm onNewName={this.handleNewName}/>
+     
 
       </div>
     );
@@ -103,6 +95,7 @@ var firstname = 'Andrew';
 ReactDOM.render(
   // we pass the var through React JSX
   <Greeter name={firstname} message="This is a message"/>,
+  
   document.getElementById('app')
 );
 
