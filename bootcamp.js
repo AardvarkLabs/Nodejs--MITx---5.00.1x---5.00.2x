@@ -95,3 +95,26 @@ const counts = [
   // extractDomains("mobile.sports.yahoo.com")// => ['mobile.sports.yahoo.com', 'sports.yahoo.com', 'yahoo.com', 'com']
   
   getTotalbyDomain(counts);
+
+
+
+
+  // -------
+
+let isAccountLocked = false
+let userRole = 'user'
+
+if (isAccountLocked) {
+    console.log('is account locked')
+} else {
+    console.log('welcome')
+}
+
+
+if (true) {
+    console.log('is account locked')
+} else if(userRole === 'admin') {
+ console.log('welcome admin')
+} else {
+ console.log('welcome')
+}
