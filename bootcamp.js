@@ -19,14 +19,14 @@ let num = x + 1 * 2
 console.log(num)
 */
 
- 
+
 let age = 26
 let dogYears = (age + 1) / 7
 
 console.log(dogYears)
 
 
- 
+
 
 
 
@@ -73,33 +73,33 @@ const counts = [
     "2,en.wikipedia.org",
     "1,es.wikipedia.org",
     "1,mobile.sports"
-  ]
-  
-  function getTotalbyDomain (counts) { 
-      
-      for (let i=0; i < counts.length; i++) {
-          var clicksAndDomain = counts[i].split(','); // ['900', 'google.com']
-          let clicks = clicksAndDomain[3];
-          // console.log(clicks[0]);
-          
-          var IndiceClicks = counts[i].split(','); // ['900', 'google.com']
-          let clicksIndice = IndiceClicks[1];
-          console.log(clicks, clicksIndice);
-          
-          // mobile.sports.yahoo.com => mobile.sports.yahoo.com , sports.yahoo.com , yahoo.com , com
-      }
-  
-  }
- 
-  
-  // extractDomains("mobile.sports.yahoo.com")// => ['mobile.sports.yahoo.com', 'sports.yahoo.com', 'yahoo.com', 'com']
-  
-  getTotalbyDomain(counts);
+]
+
+function getTotalbyDomain(counts) {
+
+    for (let i = 0; i < counts.length; i++) {
+        var clicksAndDomain = counts[i].split(','); // ['900', 'google.com']
+        let clicks = clicksAndDomain[3];
+        // console.log(clicks[0]);
+
+        var IndiceClicks = counts[i].split(','); // ['900', 'google.com']
+        let clicksIndice = IndiceClicks[1];
+        console.log(clicks, clicksIndice);
+
+        // mobile.sports.yahoo.com => mobile.sports.yahoo.com , sports.yahoo.com , yahoo.com , com
+    }
+
+}
+
+
+// extractDomains("mobile.sports.yahoo.com")// => ['mobile.sports.yahoo.com', 'sports.yahoo.com', 'yahoo.com', 'com']
+
+getTotalbyDomain(counts);
 
 
 
 
-  // -------
+// -------
 
 let isAccountLocked = false
 let userRole = 'user'
@@ -113,8 +113,14 @@ if (isAccountLocked) {
 
 if (true) {
     console.log('is account locked')
-} else if(userRole === 'admin') {
- console.log('welcome admin')
+} else if (userRole === 'admin') {
+    console.log('welcome admin')
 } else {
- console.log('welcome')
+    console.log('welcome')
 }
+
+
+
+// ----- 
+
+
