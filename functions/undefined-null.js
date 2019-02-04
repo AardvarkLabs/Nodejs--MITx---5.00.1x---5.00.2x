@@ -1,3 +1,7 @@
+
+
+
+
 let name 
 
 name = 'Jen'
@@ -7,4 +11,20 @@ if (name === undefined ) {
  } else {
      console.log(name)
  }
- console.log(name)
+
+ let square = function (num) {
+       console.log(num)
+ }
+
+ let result = square()
+console.log(result)
+
+
+// null as assigned value 
+let age = 27
+
+age = null
+
+console.log(age)
+
+
