@@ -25,7 +25,7 @@ let getTip = function (total, TipPercent = .1) {
    let percent = TipPercent * 100
    let tip = total * TipPercent
    // template strings 
-   return `À ${percent}% tip on $${total} would be $${Tip}` 
+   return `À ${percent}% tip on $${total} would be $${tip}` 
 }
 let tip = getTip(100)
 console.log(tip)
