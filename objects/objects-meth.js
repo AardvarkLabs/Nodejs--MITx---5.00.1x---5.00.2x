@@ -1,28 +1,28 @@
-//
+let name = '  Andrew Mead '
 
-let restorant = {
-    name: 'ASB',
-    guestCapacity: 75,
-    guestCount: 0,
-    checkAvailavility: function (partySize) {
-        //console.log(this.guestCapacity)
-        let seatLeft = this.guestCapacity - this.guestCount
-        return partySize <= seatLeft
-      // console.log(partySize)
- 
-    },
-    seatParty: function (partySize) {
-        this.guestCount = this.guestCount + partySize
-    },
-    removeParty : function (partySize) {
-        this.guestCount = this.guestCount - partySize
+// Length property
+console.log(name.length)
 
-    }
+// Convert to upper case
+console.log(name.toUpperCase())
+
+// Convert to lower case
+console.log(name.toLowerCase())
+
+// Includes method
+let password = 'abc123asdf098'
+console.log(password.includes('password'))
+
+// Trim
+console.log(name.trim())
+
+// Challenge area
+
+// isValidPassword
+let isValidPassword = function (password) {
+    return password.length > 8 && !password.includes('password')
 }
 
-// seatParty
-//removeParty
-restorant.seatParty(72)
-console.log(restorant.checkAvailavility(4))
-restorant.removeParty(5)
-console.log(restorant.checkAvailavility(4))
+console.log(isValidPassword('asdfp'))
+console.log(isValidPassword('abc123!@#$%^&'))
+console.log(isValidPassword('asdfpasdfpoijpassword'))
