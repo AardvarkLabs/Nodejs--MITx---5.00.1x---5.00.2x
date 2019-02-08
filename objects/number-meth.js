@@ -12,3 +12,4 @@ let max = 1
 let randomNum = Math.floor(Math.random() * (max - min + 1)) + min
 // 0 - .9999
 console.log(randomNum)
+
