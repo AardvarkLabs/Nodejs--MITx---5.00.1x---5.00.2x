@@ -4,3 +4,4 @@ const person = {
 person.age = 28
 
 console.log(person)
+
