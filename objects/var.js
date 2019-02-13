@@ -16,5 +16,10 @@ console.log(age)
 var age
 
 */
+var age
+age  = 10
 
+console.log(age)
+
+ 
 
