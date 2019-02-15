@@ -13,6 +13,8 @@ notes.unshift('my first note')
 todos.splice(2, 1)
 
 
+
+
 notes.splice(1, 1)
 
 
