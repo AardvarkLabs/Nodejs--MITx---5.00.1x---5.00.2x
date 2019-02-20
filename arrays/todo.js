@@ -25,5 +25,9 @@ const deleteTodo = function (todos, todoText) {
     }
 }
  
+
+
+/*
 deleteTodo(todos, '!!buy food')
 console.log(todos)
+*/

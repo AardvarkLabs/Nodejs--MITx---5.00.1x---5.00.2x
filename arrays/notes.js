@@ -15,12 +15,18 @@ const findNote = function (notes, noteTitle) {
     })
 }
 
-const filteredNotes = notes.filter(function(note, index) {
-    return true
+const findNotes = function (notes, query) {
+        return notes.filter(function(note, index) {
+            const isTitleMatch = note.title.toLowerCase().includes('ne')
+            const isBodyMatch = note.body.toLowerCase().includes('ne')
+            return isTitleMatch || isBodyMatch
 
-})
+        })
+ 
+}
 
-console.log(filteredNotes)
+
+console.log(findNotes(notes, 'eating'))
 
 // const findNote = function (notes, noteTitle) {
 //     const index = notes.findIndex(function (note, index) {
