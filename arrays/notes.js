@@ -1,42 +1,33 @@
-
-
-
 const notes = [{
-    title: 'my next t',
-    body: 'i would like to go to spain'
+    title: 'My next trip',
+    body: 'I would like to go to Spain'
 }, {
     title: 'Habbits to work on',
-    body: 'work out. eating a bit better'
+    body: 'Exercise. Eating a bit better.'
 }, {
-    title: 'office',
-    body: 'get a new seat'
+    title: 'Office modification',
+    body: 'Get a new seat'
 }]
 
-// console.log(notes.pop())
-// notes.push('My new note')
+const findNote = function (notes, noteTitle) {
+    return notes.find(function (note, index) {
+        return note.title.toLowerCase() === noteTitle.toLowerCase()
+    })
+}
 
-// console.log(notes.shift())
-// notes.unshift('My first note')
+const filteredNotes = notes.filter(function(note, index) {
+    return true
 
-// notes.splice(1, 1, 'This is the new second item')
-
-// notes[2] = 'This is now the new note 3'
-
-// notes.forEach(function (item, index) {
-//     console.log(index)
-//     console.log(item)
-// })
-
-
-console.log(notes.length)
-console.log(notes)
-
-
-
-console.log(notes.length)
-console.log(notes)
-
-const index = notes.findIndex(function (note, index) {
-    return note.title === 'Habbits to work on'
 })
-console.log(index)
+
+console.log(filteredNotes)
+
+// const findNote = function (notes, noteTitle) {
+//     const index = notes.findIndex(function (note, index) {
+//         return note.title.toLowerCase() === noteTitle.toLowerCase()
+//     })
+//     return notes[index]
+// }
+
+const note = findNote(notes, 'some other office modification')
+console.log(note)
