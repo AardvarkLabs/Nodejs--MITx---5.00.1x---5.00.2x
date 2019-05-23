@@ -1,29 +1,38 @@
-const todos = [{
-    text: 'Order cat food',
-    completed: true
+
+/*
+files : developed by Felipe A. Gonzalez.
+f.alfonso.go@gmail.com 
+
+*/
+
+
+const notes  = [{
+    title: 'my next trip',
+    body: 'I would like to go to Spain'
 }, {
-    text: 'Clean kitchen',
-    completed: false
+    title: 'habbits to work on',
+    body: 'work out more'
 }, {
-    text: 'Buy food',
-    completed: true
-}, {
-    text: 'Do work',
-    completed: false
-}, {
-    text: 'Exercise',
-    completed: true
+    title: 'office work',
+    body: 'get shit done'
 }]
 
-const deleteTodo = function (todos, todoText) {
-    const index = todos.findIndex(function (todo) {
-        return todo.text.toLowerCase() === todoText.toLowerCase()
-    })
+const findNote = function (notes, noteTitle) {
+    return notes.find(function(note, index){
+        return note.title.toLowerCase() == noteTitle.toLowerCase()
 
-    if (index > -1) {
-        todos.splice(index, 1)
-    }
+    })
 }
+
+const filteredNotes = notes.filter(function(note, index) {
+    const isTitleMatch = note.title.toLowerCase().includes('me')
+    const isBodyMatch = note.body.toLowerCase().includes('me')
+    return isTitleMatch || isBodyMatch
+})
+
+console.log(filteredNotes)
+
+
  
 
 
@@ -31,3 +40,7 @@ const deleteTodo = function (todos, todoText) {
 deleteTodo(todos, '!!buy food')
 console.log(todos)
 */
+
+const note = findNote(notes, 'same other office modification')
+console.log(note)
+
