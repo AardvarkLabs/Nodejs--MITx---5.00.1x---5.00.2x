@@ -42,9 +42,12 @@ la propiedad Array.prototype que representa el prototipo del constructor de Arra
 /* 
 888 */
 
+
+//**********************************
 // what's the output
 
 // var is hero objt
+/* 
 var hero = {
         // name is defined
         _name : 'John Doe',
@@ -60,3 +63,43 @@ var StoleSecretIdentity = hero.getSecretIdentity;
 console.log(StoleSecretIdentity());
 // get the name defined in the var 
 console.log(hero.getSecretIdentity());
+ */
+
+// ************************************
+
+
+// how do you create a private var in js
+
+/* 
+function secretVariable() {
+    var private = "secret fucking code, tired, and I wanna get done this shit quickly";
+    return function() {
+        return private
+    }
+}
+
+var getPrivateVariable = secretVariable()
+
+console.log(getPrivateVariable())
+ */
+
+
+
+
+
+ // what is the output ?
+
+ var num = 4;
+
+ function outer(){
+     var num = 2
+     function inner(){
+         num++;
+         var num = 3;
+         console.log(num)
+     }
+     inner();
+ }
+
+ outer();
+ 
