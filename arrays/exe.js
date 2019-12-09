@@ -103,3 +103,6 @@ console.log(getPrivateVariable())
 
  outer();
  
+
+
+ 
