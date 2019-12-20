@@ -4,3 +4,6 @@ let temp = 32
 let isfreez = temp < 32
 
 console.log(isfreez)
+
+
+

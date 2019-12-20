@@ -1,28 +1,30 @@
 
 
 
-let temp = 138
+
+
+
+
+
+
+let isAccLocked =  false
+let userRole = 'user'
+
+if (isAccLocked) {
+    console.log('is account locked')
+} else if (userRole == 'admin'){
+    console.log('welcome admin')
+} else {
+    console.log('welcome')
+}
+
+
+let temp = 4200
 
 if (temp <= 32) {
-      console.log('it is freezing out there')
-}
-
-if (temp >= 110) {
-    console.log('it is way to be inside of home due the hot')
-}
-
-// challenge area
-
-let age = 6
-
-
-// if 7 or under print message about child message
-
-if (large <= 7){
-    console.log('you eill get it')
-}
-
-
-if (large >= 65){
-    console.log('you eill get it but with a discount')
+    console.log('it is freezing outside')
+} else if (temp >= 110) {
+    console.log('too hot')
+} else {
+    console.log('go for it, pretty nice out')
 }

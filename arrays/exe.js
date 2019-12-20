@@ -47,8 +47,8 @@ la propiedad Array.prototype que representa el prototipo del constructor de Arra
 // what's the output
 
 // var is hero objt
-/* 
-var hero = {
+
+/* var hero = {
         // name is defined
         _name : 'John Doe',
         //secret id holds the id of hero
@@ -63,8 +63,8 @@ var StoleSecretIdentity = hero.getSecretIdentity;
 console.log(StoleSecretIdentity());
 // get the name defined in the var 
 console.log(hero.getSecretIdentity());
- */
 
+ */
 // ************************************
 
 
@@ -89,6 +89,7 @@ console.log(getPrivateVariable())
 
  // what is the output ?
 
+/*
  var num = 4;
 
  function outer(){
@@ -103,6 +104,47 @@ console.log(getPrivateVariable())
 
  outer();
  
+ */
+
+/* 
+
+function myFunc(theObject) {
+    theObject = {make: '1', model: '2', year: 3};
+  }
+  
+  var mycar = {make: 'Honda', model: 'Accord', year: 1998},
+  var x, y;
+  
+  x = mycar.make;     // x toma el valor "Honda"
+  
+  myFunc(mycar);
+  y = mycar.make;     // y sigue con el valor "Honda" 
+  
 
 
- 
+ */
+
+
+
+ /*
+escribir una funcion que recibe un arreglo de enteros y retorna otra funcion que 
+recibe como paramentros cualquier funcion que espere como paramentro la suma de 
+los elemtnos del aarrelgo original
+la solucion debe permitrme ejecutar 
+algo como suma ([1,2,3] X resultado =< console.log(resultado)
+
+JS
+ */
+/*
+------------------------------------------
+*/
+
+
+
+/*
+escribe en react (tipo funcion)
+que acepte una lista de nombres, los ordene e imprima
+como una lista HTML ordenada (ol).
+
+
+*/

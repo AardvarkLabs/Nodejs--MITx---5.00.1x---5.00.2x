@@ -12,4 +12,3 @@ fs.appendFile('greetings.txt', 'hello world!', function (err) {
     }
 });
  
-
