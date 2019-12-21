@@ -16,12 +16,11 @@ for (var i = 1; i <= 100; i++) {
 
  */
 
-
 /*
 Haga que este código funcione:
 */
 
-// [1,2,3,4,5].duplicator(); 
+// [1,2,3,4,5].duplicator();
 // [1,2,3,4,5,1,2,3,4,5]
 
 /*
@@ -41,7 +40,6 @@ la propiedad Array.prototype que representa el prototipo del constructor de Arra
 
 /* 
 888 */
-
 
 //**********************************
 // what's the output
@@ -67,7 +65,6 @@ console.log(hero.getSecretIdentity());
  */
 // ************************************
 
-
 // how do you create a private var in js
 
 /* 
@@ -83,11 +80,7 @@ var getPrivateVariable = secretVariable()
 console.log(getPrivateVariable())
  */
 
-
-
-
-
- // what is the output ?
+// what is the output ?
 
 /*
  var num = 4;
@@ -124,9 +117,9 @@ function myFunc(theObject) {
 
  */
 
+// -+-+-+-+-+-+-+-+--+-+--++-+++-+-+-+-+-+-++-++-+
 
-
- /*
+/*
 escribir una funcion que recibe un arreglo de enteros y retorna otra funcion que 
 recibe como paramentros cualquier funcion que espere como paramentro la suma de 
 los elemtnos del aarrelgo original
@@ -139,7 +132,51 @@ JS
 ------------------------------------------
 */
 
+import { Observable } from "rxjs";
 
+
+const Observable = new Subject();
+
+function processData() {
+  const EntNum = [1, 2, 3, 4, 5];
+
+  const observale = new Observable(sbscriber => {
+    subscriber.next(1);
+    subscriber.next(3);
+    subscriber.next(3);
+    subscriber.next(4);
+    setTimeout(() => {
+      subscriber.next(5);
+      subscriber.complete();
+    });
+  });
+}
+// This is asynchronous...
+function processData(callback) {
+  fetchDataInAFarAwayAndMysticDatabase(function(err, data) {
+    console.log("just before subscribe");
+    observable.subscribe({
+      next(x) {
+        console.log("got value " + x);
+      },
+      error(err) {
+        console.error("something wrong occurred: " + err);
+      },
+      complete() {
+        console.log("done");
+      }
+    });
+    console.log("just after subscribe");
+
+    if (err) {
+      return callback(err);
+    }
+    data += 1;
+    callback(null, x);
+  });
+};
+
+console.log(x)
 
 /*
 escribe en react (tipo funcion)
@@ -148,7 +185,3 @@ como una lista HTML ordenada (ol).
 
 
 */
-
-
-
-
