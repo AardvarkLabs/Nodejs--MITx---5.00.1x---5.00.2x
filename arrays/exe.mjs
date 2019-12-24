@@ -132,20 +132,20 @@ JS
 ------------------------------------------
 */
 
-
+/* 
     const EntNum = [1, 2, 3, 4, 5];
 
-
+ */
 
 // This is asynchronous...
-function processData(callback) {
+/* function processData(callback) {
 
 
 
 
 };
 
-console.log(x)
+console.log(x) */
 
 /*
 escribe en react (tipo funcion)
@@ -154,3 +154,5 @@ como una lista HTML ordenada (ol).
 
 
 */
+
+
