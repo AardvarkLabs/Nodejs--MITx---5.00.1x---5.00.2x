@@ -137,7 +137,15 @@ JS
 
  */
 
+// This is asynchronous...
+/* function processData(callback) {
 
+
+
+
+};
+
+console.log(x) */
 
 /*
 escribe en react (tipo funcion)
