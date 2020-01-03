@@ -154,7 +154,7 @@ como una lista HTML ordenada (ol).
 
 
 */
-
+/* 
 
 let StuScore = 41
 let MaxScore = 100
@@ -163,3 +163,9 @@ let percent = (StuScore / MaxScore) * 100
 console.log(percent)
 
 
+ */
+
+
+
+
+ 
