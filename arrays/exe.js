@@ -175,7 +175,7 @@ console.log(kel);
 
 // just preparing algorithms
 
-console.time("100 objs in for loop");
+console.time('100 objs in for loop');
 
 function NewObj(param) {
   this.value = param;
@@ -186,4 +186,7 @@ for (var i = 0; i < 100; i++) {
   var Obj = NewObj([i]);
 }
 
-console.timeEnd("100 objts in for Loooooop");
+console.timeEnd('100 objts in for Loooooop');
+
+
+
