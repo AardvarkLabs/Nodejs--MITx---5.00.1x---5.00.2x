@@ -164,10 +164,26 @@ console.log(percent)
 
 
  */
-
+/* 
 let fah = 32;
-let cel = (fah - 32) * 5 / 9;
-let kel = (fah + 459.67) * 5 /9
+let cel = ((fah - 32) * 5) / 9;
+let kel = ((fah + 459.67) * 5) / 9;
 
 console.log(cel);
-console.log(kel)
+console.log(kel);
+ */
+
+// just preparing algorithms
+
+console.time("100 objs in for loop");
+
+function NewObj(param) {
+  this.value = param;
+}
+
+for (var i = 0; i < 100; i++) {
+  // new objts
+  var Obj = NewObj([i]);
+}
+
+console.timeEnd("100 objts in for Loooooop");
