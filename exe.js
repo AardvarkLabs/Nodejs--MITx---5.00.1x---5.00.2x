@@ -45,14 +45,16 @@ la propiedad Array.prototype que representa el prototipo del constructor de Arra
 // what's the output
 
 // var is hero objt
+/* 
+let hero;
 
-/* var hero = {
-        // name is defined
-        _name : 'John Doe',
-        //secret id holds the id of hero
-        getSecretIdentity: function () {
-                return this._name;
-        }
+hero = {
+       // name is defined
+       _name : 'John Doe',
+       //secret id holds the id of hero
+       getSecretIdentity: function () {
+               return this._name;
+       }
 };
 
 var StoleSecretIdentity = hero.getSecretIdentity;
@@ -177,22 +179,36 @@ console.log(kel);
 
 
 // just preparing algorithms
- /* 
+/* 
 console.time("100 objs in for loop");
 
 function NewObj(param) {
-  this.value = param;
+ this.value = param;
 }
 
 for (var i = 0; i <= 100; i++) {
-  // new objts
-  var Obj = new NewObj([i]);
+ // new objts
+ var Obj = new NewObj([i]);
 }
 
 console.timeEnd("100 objts in for Loooooop");
 
+
  */
 
 
+let temp = 32
+let isFreezing = temp <= 32
 
- 
+
+console.log(isFreezing);
+
+let age = 26
+
+let isChild = age <= 7
+
+let isSenior = age >= 65
+
+console.log(isChild);
+
+console.log(isSenior);
