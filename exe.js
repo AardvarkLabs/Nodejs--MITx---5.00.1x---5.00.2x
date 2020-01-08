@@ -197,15 +197,15 @@ console.timeEnd("100 objts in for Loooooop");
  */
 
 
-let temp = 120
+/* let temp = 120
 let isFreezing = temp <= 80
-
+ */
 /* 
 console.log(isFreezing);
  */
 
  //creating if statements 
-
+/* 
 if (isFreezing) {
     console.log("It is really cold outside");
 }
@@ -215,7 +215,7 @@ if (temp >= 110) {
 }
 
 
-let age = 65
+let age = 65 */
 /* 
 let isChild = age <= 7
 
@@ -227,8 +227,33 @@ console.log(isSenior);
 
  */
 
- 
 
+ // boolean advanced
+
+
+
+let isAccountLocked = false
+let userRole = 'user'
+
+if (isAccountLocked) {
+    console.log('Is account locked')
+} else if (userRole === 'admin') {
+    console.log('Welcome Admin')
+} else {
+    console.log('Welcome')
+}
+
+// Challenge area
+/* 
+let temp = 4
+
+if (temp <= 32) {
+    console.log('It is freezing outside')
+} else if (temp >= 110) {
+    console.log('It is hot outside')
+} else {
+    console.log('Go for it. It is pretty nice out')
+} */
 
 
 
