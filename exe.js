@@ -197,7 +197,7 @@ console.timeEnd("100 objts in for Loooooop");
  */
 
 
-let temp = 80
+let temp = 120
 let isFreezing = temp <= 80
 
 /* 
@@ -210,9 +210,13 @@ if (isFreezing) {
     console.log("It is really cold outside");
 }
 
+if (temp >= 110) {
+    console.log("it is way too hot outside");
+}
+
 
 let age = 65
-
+/* 
 let isChild = age <= 7
 
 let isSenior = age >= 65
@@ -221,7 +225,9 @@ console.log(isChild);
 
 console.log(isSenior);
 
+ */
 
+ 
 
 
 
