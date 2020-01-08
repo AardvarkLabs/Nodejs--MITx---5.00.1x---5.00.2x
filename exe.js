@@ -200,8 +200,16 @@ console.timeEnd("100 objts in for Loooooop");
 let temp = 32
 let isFreezing = temp <= 32
 
-
+/* 
 console.log(isFreezing);
+ */
+
+ //creating if statements 
+
+if (isFreezing) {
+    
+}
+
 
 let age = 26
 
