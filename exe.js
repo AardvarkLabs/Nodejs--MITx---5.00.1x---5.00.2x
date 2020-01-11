@@ -260,7 +260,7 @@ if (temp <= 32) {
 
 
 
-
+/* 
 let varOne = 'varOne'
 
 if (true) {
@@ -283,3 +283,40 @@ console.log(varTwo)
 
 
 
+ */
+/* 
+let name = 'Andrew'
+
+if (true) {
+    //let name = 'Mike'
+
+    if (true) {
+        let name = 'Jen'
+        console.log(name)
+    }
+}
+
+if (true) {
+    console.log(name)
+}
+
+
+
+ */
+
+
+ var locales = {
+     europe : function() {
+         var myFriend = "Monique";
+         var france = function() {
+             var paris = function() {
+                 console.log(myFriend)
+             }
+             paris();
+         }
+         france()
+     }
+ };
+
+ var localEurpe = locales.europe();
+console.log(localEurpe);
