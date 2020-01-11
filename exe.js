@@ -231,7 +231,7 @@ console.log(isSenior);
  // boolean advanced
 
 
-
+/* 
 let isAccountLocked = false
 let userRole = 'user'
 
@@ -242,6 +242,9 @@ if (isAccountLocked) {
 } else {
     console.log('Welcome')
 }
+ */
+
+
 
 // Challenge area
 /* 
@@ -256,5 +259,24 @@ if (temp <= 32) {
 } */
 
 
+
+
+let varOne = 'varOne'
+
+if (true) {
+    console.log(varOne)
+    let varTwo = 'varTwo'
+    console.log(varTwo)
+
+    if (true) {
+        let varFour = 'varFour'
+    }
+}
+
+if (true) {
+    let varThree = 'varThree'
+}
+
+console.log(varTwo)
 
 
