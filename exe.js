@@ -341,3 +341,7 @@ console.log("-------------------------------------")
 let greetUser = function () {
     console.log("welcome user!")
 }
+
+
+greetUser();
+
