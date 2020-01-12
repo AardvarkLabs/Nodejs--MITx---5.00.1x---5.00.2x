@@ -332,3 +332,12 @@ function testScope() {
 testScope() // output : I'm local
 console.log(test); // output: I'm global
 
+
+// ------------
+
+console.log("-------------------------------------")
+
+
+let greetUser = function () {
+    console.log("welcome user!")
+}
