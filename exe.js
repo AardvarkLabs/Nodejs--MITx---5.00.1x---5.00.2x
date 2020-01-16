@@ -338,10 +338,28 @@ console.log(test); // output: I'm global
 console.log("-------------------------------------")
 
 
-let greetUser = function () {
-    console.log("welcome user!")
+let greetUser = function (num) {
+    console.log("num")
 }
 
 
-greetUser();
+greetUser(3);
 
+console.log("-------------------------------------")
+
+
+function showState() {     // moved to the top (function declaration)
+    console.log("Ready");
+  } 
+  
+  var showState;            // moved to the top (variable declaration)
+  
+  showState();  
+  
+  showState = function() {   // left in place (variable assignment)
+    console.log("Idle");
+  };
+
+
+
+  
