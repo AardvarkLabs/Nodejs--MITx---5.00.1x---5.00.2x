@@ -363,6 +363,7 @@ function showState() {     // moved to the top (function declaration)
 
   console.log("-------------------------------------")
 
+// writing a simple callback in js
 
 function funcionPrincipal(callback){
     // alert('hago algo y llamo al callback avisando que terminé');
@@ -372,7 +373,7 @@ function funcionPrincipal(callback){
  
 funcionPrincipal(function(nombre){
    // alert('me llamo ' + nombre);
-   console.log("'me llamo ' + nombre")
+   console.log('me llamo ' + nombre)
 });
 
 
