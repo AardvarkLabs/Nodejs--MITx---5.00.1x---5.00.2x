@@ -408,7 +408,7 @@ function calcularIVA(precio){
  
 var precio = 23;
 var precioIVA = calcularIVA(precio);
-alert(precioIVA);
+console.log(precioIVA);
 
 
 
