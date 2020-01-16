@@ -397,4 +397,18 @@ var numero2 = 5;
 sumar(numero1, numero2);
 
 
+console.log("-------------------------------------")
+//
+
+
+function calcularIVA(precio){
+    preciototal = precio * 1.21;
+    return preciototal;
+}
+ 
+var precio = 23;
+var precioIVA = calcularIVA(precio);
+alert(precioIVA);
+
+
 
