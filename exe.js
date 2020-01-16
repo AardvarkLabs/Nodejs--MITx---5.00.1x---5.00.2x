@@ -361,5 +361,18 @@ function showState() {     // moved to the top (function declaration)
   };
 
 
+  console.log("-------------------------------------")
 
-  
+
+function funcionPrincipal(callback){
+    // alert('hago algo y llamo al callback avisando que terminé');
+    console.log("hago algo y llamo al callback avisando que terminé")
+    callback('Miguel');
+}
+ 
+funcionPrincipal(function(nombre){
+   // alert('me llamo ' + nombre);
+   console.log("'me llamo ' + nombre")
+});
+
+
