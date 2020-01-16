@@ -376,4 +376,25 @@ funcionPrincipal(function(nombre){
    console.log('me llamo ' + nombre)
 });
 
+console.log("-------------------------------------")
+// tipos de funciones 
+
+
+// SIMPLE FUNCION PARA PRACTICA DE CONOCIMIENTOS 
+// la funcion tiene los siguientes parametros 
+function sumar(numero1, numero2){
+    // realizo la operacion matematica 
+    var resultado = numero1 + numero2;
+    // alert('El resultado de ' + numero1 + ' + ' + numero2 + " = " + resultado);
+    // imprimo resultado 
+    console.log('El resultado de ' + numero1 + ' + ' + numero2 + " = " + resultado);
+}
+ 
+// asigno valores a variables 
+var numero1 = 4;
+var numero2 = 5;
+// entrego los parametros a la funcion convertidos en numeros 
+sumar(numero1, numero2);
+
+
 
