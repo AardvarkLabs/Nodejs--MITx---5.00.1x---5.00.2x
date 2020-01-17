@@ -412,3 +412,23 @@ console.log(precioIVA);
 
 
 
+console.log("-------------------------------------")
+
+
+let yo = {
+    nombre: "yeison",
+    edad: 22,
+    hace: "engineer",
+    hablar: function () {
+      console.log(this.nombre);
+      console.log(this.edad);
+    },
+    profesion: function () {
+        console.log(this.hace)
+
+    }
+  };
+  
+  yo.hablar(); // yeison
+  yo.profesion()
+
