@@ -432,3 +432,32 @@ let yo = {
   yo.hablar(); // yeison
   yo.profesion()
 
+// ----
+
+console.log('.................')
+
+
+let Persona = function (nombre, edad, madre) {
+    return {
+      nombre: nombre,
+      edad: edad,
+      hablar: function() {
+        console.log(this.nombre);
+      },
+      madre: {
+        nombre: madre,
+        hablar: function() {
+          console.log(this.nombre);
+        }
+      }
+    };
+  };
+  
+  const ana = Persona(‘Ana’, 30, ‘Clara’);
+  
+  ana.hablar(); // Ana
+  ana.madre.hablar(); // Clara
+
+
+
+  
