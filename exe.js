@@ -437,7 +437,7 @@ let yo = {
 console.log('.................')
 
 
-let Persona = function (nombre, edad, madre) {
+let Persona = function (nombre, edad, madre, padre) {
     return {
       nombre: nombre,
       edad: edad,
@@ -453,11 +453,11 @@ let Persona = function (nombre, edad, madre) {
       padre: {
           nombre: padre,
           hablar: function() {
-              console.log(this.nombre)
+              console.log(this.nombre);
           }
       }
-    };
-  };
+  }
+};
   
   const ana = Persona("Ana", 30, "Clara", "Alfonso");
   
