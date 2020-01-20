@@ -437,12 +437,13 @@ let yo = {
 console.log('.................')
 
 
-let Persona = function (nombre, edad, madre, padre) {
+let Persona = function (nombre, edad, madre, padre, hermano, edad_h) {
     return {
       nombre: nombre,
       edad: edad,
       hablar: function() {
         console.log(this.nombre);
+        console.log(this.edad);
       },
       madre: {
         nombre: madre,
@@ -455,14 +456,21 @@ let Persona = function (nombre, edad, madre, padre) {
           hablar: function() {
               console.log(this.nombre);
           }
-      }
+      },
+      hermano: {
+        nombre: hermano,
+        edad_h: edad_h,
+        hablar: function() {
+            console.log(this.nombre);
+            console.log(this.edad_h);
+        }
+    }
   }
 };
   
-  const ana = Persona("Ana", 30, "Clara", "Alfonso");
+  const ana = Persona("Ana", 30, "Clara", "Alfonso", "Alfonso", 50);
   
   ana.hablar(); // Ana
   ana.madre.hablar(); // Clara
   ana.padre.hablar();
-
-
+  ana.hermano.hablar();
