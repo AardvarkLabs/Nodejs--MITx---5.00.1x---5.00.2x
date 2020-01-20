@@ -449,15 +449,20 @@ let Persona = function (nombre, edad, madre) {
         hablar: function() {
           console.log(this.nombre);
         }
+      },
+      padre: {
+          nombre: padre,
+          hablar: function() {
+              console.log(this.nombre)
+          }
       }
     };
   };
   
-  const ana = Persona(‘Ana’, 30, ‘Clara’);
+  const ana = Persona("Ana", 30, "Clara", "Alfonso");
   
   ana.hablar(); // Ana
   ana.madre.hablar(); // Clara
+  ana.padre.hablar();
 
 
-
-  
