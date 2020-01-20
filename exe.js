@@ -474,3 +474,7 @@ let Persona = function (nombre, edad, madre, padre, hermano, edad_h) {
   ana.madre.hablar(); // Clara
   ana.padre.hablar();
   ana.hermano.hablar();
+
+
+
+  
