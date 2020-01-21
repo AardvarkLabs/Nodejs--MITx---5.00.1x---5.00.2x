@@ -7,6 +7,8 @@ const url = 'https://api.darksky.net/forecast/ecd099679a492007358d1ba36b664ebe/3
     console.log(data.currently)
 }) */
 
-request ({url: url}, (error, response) => {
-    console.log(response)
+request ({url: url, json: true}, (error, response) => {
+    /* const data = JSON.parse(response.body) */
+   /*  console.log(response.body.currently) */
+   console.log(`it is currently${response.currently.temperature}`)
 })
