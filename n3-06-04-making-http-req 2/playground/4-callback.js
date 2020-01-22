@@ -10,12 +10,16 @@ const shortNames = names.filter((names) => {
 })
 
 const geoCode = (address, callback) => {
-    const data = {
-        latitude: 0,
-        longitude: 0
-    }
-    return data
+    setTimeout(() => {
+        const data = {
+            latitude: 0,
+            longitude: 0
+        }
+        callback(data)
+
+    }, 2000)
 }
 
-const data = geoCode('Santiago')
-console.log(data)
+geoCode('Santiago', (data) => {
+    console.log(data)
+})
