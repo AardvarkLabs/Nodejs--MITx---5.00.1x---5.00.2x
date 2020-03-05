@@ -12,6 +12,8 @@ if (name === undefined ) {
      console.log(name)
  }
 
+ // .................
+
  let square = function (num) {
        console.log(num)
  }
