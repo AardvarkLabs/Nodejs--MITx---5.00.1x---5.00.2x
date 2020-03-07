@@ -14,9 +14,9 @@ console.log(num)
 console.log(dogYears)
  */
 
-// stuff
+//stuff
 
-// challenge
+//challenge
 //studentscore
 //maxscore
 //percent 90
