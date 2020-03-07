@@ -30,3 +30,6 @@ console.log(percent)
 
 //print the percent 
 
+
+
+
