@@ -16,3 +16,7 @@ console.log(password.includes('password'))
 
 // trim method
 console.log(name.trim())
+
+
+// challenge 
+
