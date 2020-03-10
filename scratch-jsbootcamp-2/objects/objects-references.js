@@ -52,3 +52,6 @@ addExpense(myAccount, 2.50)
 addExpense(myAccount, 160)
 
 console.log(getAccountSummary(myAccount))
+
+
+
