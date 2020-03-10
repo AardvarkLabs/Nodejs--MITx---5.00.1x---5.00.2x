@@ -10,11 +10,8 @@ let myAccount = {
 let otherAccount = myAccount
 otherAccount.income = 1000
  */
-let aaddExpense = function (account, amount) {
-    
+let addExpense = function (account, amount) {
     account.expenses = account.expenses + amount
- 
-
 }
 /* 
 aaddExpense(myAccount, 2.50)
@@ -36,7 +33,6 @@ console.log(myAccount)
 
 let addIncome = function (account, income) {
     account.income = account.income = income
-
 }
 
 let resetAccount = function (account) {
@@ -46,10 +42,13 @@ let resetAccount = function (account) {
 
 let getAccountSummary = function(account) {
     let balance = account.income - account.expenses
-    return `Account for ${account.name} has $${balance}. $${account.income} `
+    // return `Account for ${account.name} has $${balance}. $${account.income} `
+    return `Account for ${account.name} has $${balance}. $${account.income} in income. $${account.expenses} in expenses.`
 }
 
 
 addIncome(myAccount, 2000)
-aaddExpense(myAccount, 2.50)
-aaddExpense(myAccount, 160)
+addExpense(myAccount, 2.50)
+addExpense(myAccount, 160)
+
+console.log(getAccountSummary(myAccount))
