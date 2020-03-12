@@ -27,6 +27,6 @@ console.log(notes)
 
 // counting ... : 1
 
-for (let count = 0; ) {
-
+for (let count = 0; count <= 2; count++) {
+    console.log(count)
 }
