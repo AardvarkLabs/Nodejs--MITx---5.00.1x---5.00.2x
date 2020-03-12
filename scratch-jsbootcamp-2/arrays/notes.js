@@ -25,3 +25,8 @@ console.log(notes)
 
 
 
+// counting ... : 1
+
+for (let count = 0; ) {
+
+}
