@@ -25,8 +25,12 @@ console.log(notes)
 
 
 
-// counting ... : 1
+// looping in javascript
 
-for (let count = 0; count <= 2; count++) {
+// counting ... : 1
+// 
+// for (let count = 0; count <= 2; count++) {
+// now: in reverse 
+for (let count = 2; count >= 0; count--) {
     console.log(count)
 }
