@@ -20,3 +20,13 @@ console.log(name.trim())
 
 // challenge 
 
+// isValidPassword
+let isValidPassword = function (password) {
+  return (password.length > 8 && password.includes('password')) 
+}
+// length is more than 8 - and it doesn't contain the word password
+
+console.log(isValidPassword('sdfsdf'))
+console.log(isValidPassword('abc123sdfsdf'))
+console.log(isValidPassword('sdfsdfsdswerpassword'))
+

@@ -28,8 +28,8 @@ console.log(result)
 //15/20 -> you got a C (75%)!
 // A 98-100. B 88-89, C 70-79, D 6069, F 8-59
 
-let studentScore = function(score, total) {
-  let percent = (score / total) * 100;
+const studentScore = function(score, total) {
+  const percent = (score / total) * 100;
   let letterGrade = " ";
 
   if (percent >= 90) {
@@ -47,5 +47,5 @@ let studentScore = function(score, total) {
  
 };
 
-let result = studentScore(12, 22);
+const result = studentScore(12, 22);
 console.log(result);
