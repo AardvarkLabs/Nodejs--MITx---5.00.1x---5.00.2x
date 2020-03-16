@@ -22,28 +22,18 @@ const findNote = function (notes, noteTitle) {
     }) 
 }
 
-/*
-
-const findNote = function (notes, noteTitle) {
-    const index = notes.findIndex(function(note, index) {
-        // toLowerCase makes a search more clearly
-        return note.title.toLowerCase() === noteTitle.toLowerCase()
-    })
-    return notes[index]
-}
-
-
-*/
-
-
-/*     
-    return notes.find(function (note, index) {
-        return note.title.toLowerCase() === noteTitle.toLowerCase()
-    }) 
+notes.filter(function (notes, index) {
     
+})
 
-}
-*/
+const filteredNotes = notes.filter(function (note, index) {
+    const isTitleMatch = note.title.toLowerCase().includes('office')
+    const isBodyMatch = note.body.toLowerCase().includes('office')
+    return isTitleMatch || isBodyMatch
+})
+
+console.log(filteredNotes)
+
 const note = findNote(notes, 'office modification')
 console.log(note)
 
