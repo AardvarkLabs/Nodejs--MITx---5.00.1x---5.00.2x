@@ -10,28 +10,25 @@ const notes = [{
     title: 'habbit to work on',
     body: 'Excersive. Eating a bit healthy'
 }, {
-    title: 'Office modification',
+    title: 'Office emodification',
     body: 'Get a new seat'
 
 }]
 
 const findNote = function (notes, noteTitle) {
-    const index = notes.findIndex(function(note, index) {
-        return note.title === noteTitle
-    })
-    return notes[index]
-}
-
-
-/*     
     return notes.find(function (note, index) {
         return note.title.toLowerCase() === noteTitle.toLowerCase()
-    }) 
-    
-
+    })
 }
-*/
-const note = findNote(notes, 'Office modification')
+
+// const findNote = function (notes, noteTitle) {
+//     const index = notes.findIndex(function (note, index) {
+//         return note.title.toLowerCase() === noteTitle.toLowerCase()
+//     })
+//     return notes[index]
+// }
+
+const note = findNote(notes, 'some other office modification')
 console.log(note)
 
 /* 
@@ -68,7 +65,7 @@ let otherObject = someObject
 console.log(someObject == someObject)
 
  */
-/* 
+
 const index = notes.findIndex(function (note, index) {
     console.log(note)
     return note.title == 'habbit to work on'
@@ -76,7 +73,7 @@ const index = notes.findIndex(function (note, index) {
 })
 
 console.log(index)
- */
+
 
 
 // looping in javascript
