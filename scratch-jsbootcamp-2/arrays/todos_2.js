@@ -26,10 +26,11 @@ const deleteTodo = function (todos, todoText) {
     }
 }
 
+console.log(getThingsTodo(todos))
 // 1 converest array to array of objects  =>  text, completed
 // 2 create function to remove a todo by text value
-
+/* 
 deleteTodo(todos, '!!buy food')
 console.log(todos)
 
-
+ */
