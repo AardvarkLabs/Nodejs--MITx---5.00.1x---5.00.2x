@@ -26,6 +26,13 @@ const deleteTodo = function (todos, todoText) {
     }
 }
 
+const getThingsTodo = function (todos) {
+    return todos.filter(function (todo, index) {
+        return !todo.completed
+    })
+}
+
+
 console.log(getThingsTodo(todos))
 // 1 converest array to array of objects  =>  text, completed
 // 2 create function to remove a todo by text value
