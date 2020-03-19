@@ -16,6 +16,19 @@ text: 'Exercise',
 completed: true
 }]
 
+const sortTodos = function (todos) {
+    todos.sort(function (a, b) {
+        if (!a.completed && b.completed) {
+            return -1
+        } else if (!b.completed && a.completed) {
+            return 1
+        } else {
+            return 0
+        }
+    })
+}
+
+console.log(sortTodos)
 
 const deleteTodo = function (todos, todoText) {
     const index = todos.findIndex(function(todo) {
@@ -33,11 +46,10 @@ const getThingsTodo = function (todos) {
 }
 
 
-console.log(getThingsTodo(todos))
+// console.log(getThingsTodo(todos))
 // 1 converest array to array of objects  =>  text, completed
 // 2 create function to remove a todo by text value
-/* 
+
 deleteTodo(todos, '!!buy food')
 console.log(todos)
 
- */
