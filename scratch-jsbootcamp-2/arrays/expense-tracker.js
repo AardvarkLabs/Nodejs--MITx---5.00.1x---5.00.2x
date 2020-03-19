@@ -26,6 +26,11 @@ const account = {
 // addExpense  -> description, amount
 // getAccountSummary -> total up all expenses -> Andrew Mead has $1250 in expenses
 
+// 1 add income array to account
+// 2 addincome method -> description, amount
+// 3 Tweak getAccountSummary
+
+
 
 account.addExpense('Rent', 950)
 account.addExpense('Coffee', 2)
