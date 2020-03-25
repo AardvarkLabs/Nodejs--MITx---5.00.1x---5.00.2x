@@ -36,6 +36,11 @@ todos.forEach(function (todo) {
     document.querySelector('body').appendChild(p)
 })
 
+// listen for new  todo creation 
+
+document.querySelector('#add-todo').addEventListener('click', function (e){
+    console.log('add a new todo...')
+})
 
 /* 
 const paragraphs = document.querySelectorAll('p')
