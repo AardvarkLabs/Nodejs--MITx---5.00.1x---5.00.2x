@@ -42,6 +42,13 @@ document.querySelector('#add-todo').addEventListener('click', function (e){
     console.log('add a new todo...')
 })
 
+//
+// 
+
+document.querySelector('#new-todo-text').addEventListener('input', function (e) {
+    console.log(e.target.value)
+})
+
 /* 
 const paragraphs = document.querySelectorAll('p')
 

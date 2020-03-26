@@ -23,6 +23,10 @@ document.querySelector('#remove-all').addEventListener('click', function () {
        note.remove()
    })
 })
+
+document.querySelector('#search-text').addEventListener('change', function (e) {
+    console.log(e.target.value)
+})
 // DOM - document object model
 
 /* const p = document.querySelector('h1')
