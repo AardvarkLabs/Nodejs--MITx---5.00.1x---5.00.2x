@@ -1,6 +1,3 @@
-
-//
-
 const todos = [{
     text: 'Order cat food',
     completed: false
@@ -18,56 +15,54 @@ const todos = [{
     completed: true
 }]
 
-//
+const filters = {
+    searchText: ''
+}
 
-const incompleteTodos = todos.filter(function (todo) {
-    return !todo.completed
+// start
+// copied before 
+
+const renderTodos = function (todos, filters) {
+    const filteredTodos = todos.filter(function (todo) {
+        return todo.text.toLowerCase().includes(filters.searchText.toLowerCase())
+    })
+
+    const incompleteTodos = filteredTodos.filter(function (todo) {
+        return !todo.completed
+    })
+
+    document.querySelector('#todos').innerHTML = ''
+
+    const summary = document.createElement('h2')
+    summary.textContent = `You have ${incompleteTodos.length} todos left`
+    document.querySelector('#todos').appendChild(summary)
+
+    filteredTodos.forEach(function (todo) {
+        const p = document.createElement('p')
+        p.textContent = todo.text
+        document.querySelector('#todos').appendChild(p)
+    })
+}
+
+renderTodos(todos, filters)
+
+// copied before 
+
+// end
+
+
+
+// Listen for new todo creation
+document.querySelector('#add-todo').addEventListener('click', function (e) {
+    console.log('Add a new todo...')
 })
 
-const summary = document.createElement('h2')
-summary.textContent = `You have ${incompleteTodos.length} todos left`
-document.querySelector('body').appendChild(summary)
-
-// you have 2 todos left in the 'p' tag
-// add a p for each todo above, one text value
-todos.forEach(function (todo) {
-    const p = document.createElement('p')
-    p.textContent = todo.text
-    document.querySelector('body').appendChild(p)
-})
-
-// listen for new  todo creation 
-
-document.querySelector('#add-todo').addEventListener('click', function (e){
-    console.log('add a new todo...')
-})
-
-//
-// 
-
+// Listen for todo text change
 document.querySelector('#new-todo-text').addEventListener('input', function (e) {
     console.log(e.target.value)
 })
 
-/* 
-const paragraphs = document.querySelectorAll('p')
-
-paragraphs.forEach(function (paragraph) {
-    if (paragraph.textContent.includes('the')) {
-        paragraph.remove()
-    }
-    
+document.querySelector('#search-text').addEventListener('input', function (e) {
+    filters.searchText = e.target.value
+    renderTodos(todos, filters)
 })
- */
-
-
-/* 
-const paragraphs = document.querySelectorAll('p')
-
-paragraphs.forEach(function (paragraph) {
-    if (paragraph.textContent.includes('the')) {
-        paragraph.remove()
-    }
-})
-
- */
