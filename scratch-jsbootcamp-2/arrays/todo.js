@@ -28,7 +28,7 @@ todos.forEach(function(todos,index) {
 })
 
 // console.log(todos)
-
+//console.log('')
 /*
 console.log(`Todo: ${todos[0]}`)
 console.log(`Todo: ${todos[todos.length - 2]}`)
