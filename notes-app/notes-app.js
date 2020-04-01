@@ -14,9 +14,15 @@ const filters = {
 }
 
 const renderNotes = function (notes, filters) {
-    const filteredNotes = notes.filter(function (note) {
+    const filteredNotes = notes.filter(function(note){
         return note.title.toLowerCase().includes(filters.searchText.toLowerCase())
     })
+
+
+/* const renderNotes = function (notes, filters) {
+    const filteredNotes = notes.filter(function (note) {
+        return note.title.toLowerCase().includes(filters.searchText.toLowerCase())
+    }) */
 
     document.querySelector('#notes').innerHTML = ''
     
@@ -25,7 +31,9 @@ const renderNotes = function (notes, filters) {
         noteEl.textContent = note.title
         document.querySelector('#notes').appendChild(noteEl)
     })
-}
+} // END OF CONST RENDERFILTES CONST
+
+
 
 renderNotes(notes, filters)
 
@@ -38,6 +46,6 @@ document.querySelector('#search-text').addEventListener('input', function (e) {
     renderNotes(notes, filters)
 })
 
-document.querySelector('#for-fun').addEventListener('change', function (e) {
-    console.log(e.target.checked)
+document.querySelector('#filter-by').addEventListener('change', function (e) {
+    console.log(e.target.value)
 })

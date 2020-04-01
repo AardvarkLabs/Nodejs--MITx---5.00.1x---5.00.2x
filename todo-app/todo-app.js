@@ -22,12 +22,19 @@ const filters = {
 
 const renderTodos = function (todos, filters) {
     const filteredTodos = todos.filter(function (todo) {
+
+        
         const searchTextMatch = todo.text.toLowerCase().includes(filters.searchText.toLowerCase())
         const hideCompletedMatch = !filters.hideCompleted || !todo.completed
 
         return searchTextMatch && hideCompletedMatch
     })
-
+// lines added according to the video // creates an error eventually
+ /*        filteredTodos = filteredTodos.filter(function (todo) {
+        return !filters.hideCompleted || !todo.completed
+    
+    })
+ */
     const incompleteTodos = filteredTodos.filter(function (todo) {
         return !todo.completed
     })
