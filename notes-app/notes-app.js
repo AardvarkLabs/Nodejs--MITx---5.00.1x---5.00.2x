@@ -13,10 +13,10 @@ const filters = {
     searchText: ''
 }
 
-// localStorage.setItem('location', 'Santiago')
+ // localStorage.setItem('location', 'Santiago')
    console.log(localStorage.getItem('location'))
 
-   
+
 const renderNotes = function (notes, filters) {
     const filteredNotes = notes.filter(function(note){
         return note.title.toLowerCase().includes(filters.searchText.toLowerCase())
