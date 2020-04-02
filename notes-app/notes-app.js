@@ -13,7 +13,7 @@ const filters = {
     searchText: ''
 }
 
- // localStorage.setItem('location', 'Santiago')
+ // localStorage.setItem('location', 'Philadelphia')
    console.log(localStorage.getItem('location'))
 
 
