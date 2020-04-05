@@ -17,6 +17,9 @@ const saveNotes = function (notes) {
 // Generate the DOM structure for a note
 const generateNoteDOM = function (note) {
     const noteEl = document.createElement('p')
+    const = document.createElement('button')
+    GamepadButton.textContent ='x'
+
 
     if (note.title.length > 0) {
         noteEl.textContent = note.title
@@ -24,7 +27,7 @@ const generateNoteDOM = function (note) {
         noteEl.textContent = 'Unnamed note'
     }
 
-    return noteEl
+    return noteEl 
 }
 
 // Render application notes
