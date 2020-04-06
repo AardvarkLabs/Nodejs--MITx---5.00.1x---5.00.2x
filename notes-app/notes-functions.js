@@ -18,7 +18,7 @@ const saveNotes = function (notes) {
 const generateNoteDOM = function (note) {
     const noteEl = document.createElement('p')
     const = document.createElement('button')
-    GamepadButton.textContent ='x'
+    button.textContent ='x'
 
 
     if (note.title.length > 0) {
@@ -26,8 +26,8 @@ const generateNoteDOM = function (note) {
     } else {
         noteEl.textContent = 'Unnamed note'
     }
-
-    return noteEl 
+    noteEL.appendChild(button)
+    return noteEl
 }
 
 // Render application notes
