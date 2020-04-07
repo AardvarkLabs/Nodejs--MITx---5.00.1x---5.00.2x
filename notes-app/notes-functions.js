@@ -16,8 +16,10 @@ const saveNotes = function (notes) {
 
 // Generate the DOM structure for a note
 const generateNoteDOM = function (note) {
+    const noteEl = document.createElement('div')
     const noteEl = document.createElement('p')
     const = document.createElement('button')
+
     button.textContent ='x'
     noteEL.appendChild(button)
 
@@ -26,7 +28,7 @@ const generateNoteDOM = function (note) {
     } else {
         noteEl.textContent = 'Unnamed note'
     }
-    
+    noteEl.appendChild = (textEL)
     return noteEl
 }
 

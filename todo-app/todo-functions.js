@@ -19,14 +19,11 @@ const renderTodos = function (todos, filters) {
     const filteredTodos = todos.filter(function (todo) {
         const searchTextMatch = todo.text.toLowerCase().includes(filters.searchText.toLowerCase())
         const hideCompletedMatch = !filters.hideCompleted || !todo.completed
-        debugger
+      
         return searchTextMatch && hideCompletedMatch
     })
 
-    
-    
-    debugger
-    
+ 
     
     const incompleteTodos = filteredTodos.filter(function (todo) {
         return !todo.completed
@@ -42,14 +39,33 @@ const renderTodos = function (todos, filters) {
 
 // Get the DOM elements for an individual note
 const generateTodoDOM = function (todo) {
-    const p = document.createElement('p')
+   /*  const p = document.createElement('p')
     p.textContent = todo.text
     return p
+} */
+        const todoEl = document.createElement('div')
+        const checkbox = document.createElement('input')
+        const todoText = document.createElement('span')
+        const removeButton = document.createElement('button')
+
+        checkbox.setAttribute('type', 'checbox')
+        todoEl.appendChild(todoText)
+
+        removeButton.textContent = todo.text
+        todoEl.appendChild(removeButton)
+
+    
+        return todoEl
 }
 
-// Get the DOM elements for list summary
+/*  Get the DOM elements for list summary
 const generateSummaryDOM = function (incompleteTodos) {
     const summary = document.createElement('h2')
     summary.textContent = `You have ${incompleteTodos.length} todos left`
+    return summary
+*/
+const generateSummaryDOM.funuction(incompleteTodos) {
+    const summary = document.createElement('h2')
+    summary.textContent = `you have ${inconpleteTodos.length} todos left`
     return summary
 }
