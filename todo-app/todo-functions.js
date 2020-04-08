@@ -49,12 +49,17 @@ const generateTodoDOM = function (todo) {
         const removeButton = document.createElement('button')
 
         checkbox.setAttribute('type', 'checbox')
-        todoEl.appendChild(todoText)
+        todoEl.appendChild(checkbox)
 
-        removeButton.textContent = todo.text
-        todoEl.appendChild(removeButton)
+       
+    // Setup the todo text
+    todoText.textContent = todo.text
+    todoEl.appendChild(todoText)
 
-    
+    // Setup the remove button
+    removeButton.textContent = 'x'
+    todoEl.appendChild(removeButton)
+
         return todoEl
 }
 
@@ -64,7 +69,7 @@ const generateSummaryDOM = function (incompleteTodos) {
     summary.textContent = `You have ${incompleteTodos.length} todos left`
     return summary
 */
-const generateSummaryDOM.funuction(incompleteTodos) {
+const generateSummaryDOM = funuction(incompleteTodos) {
     const summary = document.createElement('h2')
     summary.textContent = `you have ${inconpleteTodos.length} todos left`
     return summary
