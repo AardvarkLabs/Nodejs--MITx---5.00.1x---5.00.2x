@@ -22,7 +22,7 @@ const generateNoteDOM = function (note) {
 
     button.textContent ='x'
     noteEL.appendChild(button)
-
+	
     if (note.title.length > 0) {
         noteEl.textContent = note.title
     } else {
