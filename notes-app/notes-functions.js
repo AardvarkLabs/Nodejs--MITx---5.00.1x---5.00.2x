@@ -30,7 +30,10 @@ const generateNoteDOM = function (note) {
     // noteEl.appendChild(button)
 	noteEl.appendChild(button)
 	button.addEventListener('click', function () {
-		console.log(note)
+		// console.log(note)
+		// for later 6.51 AM
+		removeNote(note.id)
+		renderNotes(notes, filters)
 	})
 
     // Setup the note title text
