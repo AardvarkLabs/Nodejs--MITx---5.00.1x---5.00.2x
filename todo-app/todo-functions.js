@@ -12,6 +12,11 @@ const getSavedTodos = function () {
 }
 
 // Save todos to localStorage
+/* const saveTodos = function (todos) {
+    localStorage.setItem('todos', JSON.stringify(todos))
+}
+ */
+// playing around
 const saveTodos = function (todos) {
     localStorage.setItem('todos', JSON.stringify(todos))
 }
