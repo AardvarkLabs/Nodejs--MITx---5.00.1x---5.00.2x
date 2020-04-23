@@ -34,3 +34,5 @@ let converter = function(fahrenheit) {
  let tempOne = converter(32)
 
 console.log(tempOne)
+
+/*let converter = */

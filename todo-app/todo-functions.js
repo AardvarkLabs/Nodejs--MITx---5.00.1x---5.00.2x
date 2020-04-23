@@ -1,5 +1,3 @@
-
-
 // Fetch existing todos from localStorage
 const getSavedTodos = function () {
     const todosJSON = localStorage.getItem('todos')
@@ -12,11 +10,6 @@ const getSavedTodos = function () {
 }
 
 // Save todos to localStorage
-/* const saveTodos = function (todos) {
-    localStorage.setItem('todos', JSON.stringify(todos))
-}
- */
-// playing around
 const saveTodos = function (todos) {
     localStorage.setItem('todos', JSON.stringify(todos))
 }
@@ -31,7 +24,15 @@ const removeTodo = function (id) {
         todos.splice(todoIndex, 1)
     }
 }
-
+// taggle the completed value for a given todo
+const toggleTodo = function (id) {
+    const todo = todos.find(function (todo) {
+        return todo.id === id
+    })
+    if (todo !== undefined) {
+        todo.completed = !todo.completed
+    }
+}
 // Render application todos based on filters
 const renderTodos = function (todos, filters) {
     const filteredTodos = todos.filter(function (todo) {
@@ -62,34 +63,22 @@ const generateTodoDOM = function (todo) {
 
     // Setup todo checkbox
     checkbox.setAttribute('type', 'checkbox')
-
-    // new stuff
     checkbox.checked = todo.completed
-
     todoEl.appendChild(checkbox)
 
     // Setup the todo text
     todoText.textContent = todo.text
     todoEl.appendChild(todoText)
-
-    // Setup the remove button
-/*   
-      removeButton.textContent = 'x'
-      todoEl.appendChild(removeButton)
-      removeButton.addEventListener('click', function () {
-        removeTodo(todo.id)
+    checkbox.addEventListener('change', function () {
+        toggleTodo(todo.id)
         saveTodos(todos)
         renderTodos(todos, filters)
-    }) 
-    
-*/
-
-    // setup the remove button as exercise.
-
+    })
+    // Setup the remove button
     removeButton.textContent = 'x'
     todoEl.appendChild(removeButton)
     removeButton.addEventListener('click', function () {
-        removeTodo(todo-id)
+        removeTodo(todo.id)
         saveTodos(todos)
         renderTodos(todos, filters)
     })

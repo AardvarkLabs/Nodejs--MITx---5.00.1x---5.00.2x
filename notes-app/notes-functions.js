@@ -1,3 +1,14 @@
+
+/*
+--- credits and notes -----
+refactoring code while I study phases of the course with A. Mead.
+
+refactored code by Felipe Alfonso Gonzalez
+my email : f.alfonso@res-ear.ch
+
+*/
+
+
 // Read existing notes from localStorage
 const getSavedNotes = function () {
     const notesJSON = localStorage.getItem('notes')
