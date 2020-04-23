@@ -4,8 +4,8 @@
 refactoring code while I study phases of the course with A. Mead.
 
 refactored code by Felipe Alfonso Gonzalez
-my email : f.alfonso@res-ear.ch
-
+email : f.alfonso@res-ear.ch
+---------------------------
 */
 
 
@@ -40,9 +40,9 @@ const removeNote = function (id) {
 const generateNoteDOM = function (note) {
     const noteEl = document.createElement('div')
     const textEl = document.createElement('span')
-    const button = document.createElement('button')
+    const button = document.createElement(
+    // Setup the remove note button'button')
 
-    // Setup the remove note button
     button.textContent = 'x'
     noteEl.appendChild(button)
     button.addEventListener('click', function () {
