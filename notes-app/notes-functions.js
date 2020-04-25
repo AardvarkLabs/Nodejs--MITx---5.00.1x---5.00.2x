@@ -39,7 +39,7 @@ const removeNote = function (id) {
 // Generate the DOM structure for a note
 const generateNoteDOM = function (note) {
     const noteEl = document.createElement('div')
-    const textEl = document.createElement('span')
+    const textEl = document.createElement('a')
     const button = document.createElement(
     // Setup the remove note button'button')
 
@@ -48,6 +48,7 @@ const generateNoteDOM = function (note) {
     button.addEventListener('click', function () {
         removeNote(note.id)
         saveNotes(notes)
+        
         renderNotes(notes, filters)
     })
 
@@ -57,9 +58,10 @@ const generateNoteDOM = function (note) {
     } else {
         textEl.textContent = 'Unnamed note'
     }
+	textEl.setAttribute('href', 'edit.html')
     noteEl.appendChild(textEl)
 
-    return noteEl
+    return noteEls
 }
 
 // Render application notes
