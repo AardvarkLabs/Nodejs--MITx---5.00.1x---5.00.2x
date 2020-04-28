@@ -1,14 +1,3 @@
-
-/*
---- credits and notes -----
-refactoring code while I study phases of the course with A. Mead.
-
-refactored code by Felipe Alfonso Gonzalez
-email : f.alfonso@res-ear.ch
----------------------------
-*/
-
-
 // Read existing notes from localStorage
 const getSavedNotes = function () {
     const notesJSON = localStorage.getItem('notes')
@@ -40,15 +29,14 @@ const removeNote = function (id) {
 const generateNoteDOM = function (note) {
     const noteEl = document.createElement('div')
     const textEl = document.createElement('a')
-    const button = document.createElement(
-    // Setup the remove note button'button')
+    const button = document.createElement('button')
 
+    // Setup the remove note button
     button.textContent = 'x'
     noteEl.appendChild(button)
     button.addEventListener('click', function () {
         removeNote(note.id)
         saveNotes(notes)
-        
         renderNotes(notes, filters)
     })
 
@@ -58,10 +46,11 @@ const generateNoteDOM = function (note) {
     } else {
         textEl.textContent = 'Unnamed note'
     }
-	textEl.setAttribute('href', 'edit.html')
+    textEl.setAttribute('href', `/edit.html#${note.id}`)
+	// textEl.setAttribute('href', `/edit.html#${note.id}`)
     noteEl.appendChild(textEl)
 
-    return noteEls
+    return noteEl
 }
 
 // Render application notes
