@@ -11,6 +11,7 @@ if (note === undefined) {
     location.assign('/index.html')
 }
 
+
 titleElement.value = note.title
 bodyElement.value = note.body 
 
@@ -29,7 +30,14 @@ removeElement.addEventListener('click', function (e) {
     saveNotes(notes)
     location.assign('/index.html')
 })
-/* 
+
+
+
 document.querySelector('#note-title').value = note.title
 document.querySelector('#note-body').value = note.body
- */
+
+/*
+
+document.querySlector('#note-title').value = note.body
+document.querySlector('#note-body').value = note.body
+*/
