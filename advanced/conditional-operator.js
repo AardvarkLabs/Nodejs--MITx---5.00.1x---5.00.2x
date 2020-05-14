@@ -14,7 +14,3 @@ console.log(message)
 
 const team = ['Tyler', 'Porter', 'Andrew', 'Ben', 'Mike']
 console.log(team.length <= 4 ? `Team size: ${team.length}` : 'Too many people on your team')
-
-const team = ['tyler', 'porter', 'Andrew', 'Ben', 'Mike']
-console.log(team.lenght <= 4 ? 'team size: ${team.lenght}')
-
