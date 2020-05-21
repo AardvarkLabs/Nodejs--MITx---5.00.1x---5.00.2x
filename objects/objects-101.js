@@ -1,29 +1,23 @@
 let myBook = {
-    title : '1984', 
-    author: 'Gorge orwell',
-    pageCount: 325
+    title: '1984',
+    author: 'George Orwell',
+    pageCount: 326
 }
-console.log(`${myBook.title} by ${myBook.author}`)
-
-// console.log(myBook.author)
-
-myBook.title = 'The doorman'
 
 console.log(`${myBook.title} by ${myBook.author}`)
 
-// name, age, location
-// andrew, 27, ph, us
-//increase age by 1 and print mess againt
+myBook.title = 'Animal Farm'
 
-let teacher = {
+console.log(`${myBook.title} by ${myBook.author}`)
+
+// Challenge area
+
+let me = {
     name: 'Andrew',
     age: 27,
-    location: 'phil, usa'
+    location: 'Philadelphia'
 }
 
-
-console.log(`${teacher.name} and his age is ${teacher.age}`)
-
-teacher.age = teacher.age + 1
-
-console.log(`${teacher.name} and his age is ${teacher.age}`)
+console.log(`${me.name} is ${me.age} and lives in ${me.location}.`)
+me.age = me.age + 1
+console.log(`${me.name} is ${me.age} and lives in ${me.location}.`)

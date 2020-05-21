@@ -1,12 +1,9 @@
-
-
 const account = {
     name: 'Andrew Mead',
     expenses: [],
-    income: [], 
+    income: [],
     addExpense: function (description, amount) {
         this.expenses.push({
-            // object
             description: description,
             amount: amount
         })
@@ -26,20 +23,17 @@ const account = {
             totalExpenses = totalExpenses + expense.amount
         })
 
-        this.income.forEach(function (income){
-            totalIncome = totalIncome + income.amount 
+        this.income.forEach(function (income) {
+            totalIncome = totalIncome + income.amount
         })
 
-        accountBlance = totalIncome -totalExpenses
+        accountBalance = totalIncome - totalExpenses
 
-        return `${this.name} has a blance of $${accountBalance}. $${totalIncome} in income. $${totalExpenses} in expenses.`
+        return `${this.name} has a balance of $${accountBalance}. $${totalIncome} in income. $${totalExpenses} in expenses.`
     }
 }
 
-
-
 account.addExpense('Rent', 950)
 account.addExpense('Coffee', 2)
-account.addIncome('job', 1000)
+account.addIncome('Job', 1000)
 console.log(account.getAccountSummary())
-

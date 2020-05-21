@@ -1,17 +1,15 @@
+// Global
+  // Local
+    // Local (name)
+  // Local
 
-/* 
-global
-local
-local
-local
- */
-
- let name = 'Andrew'
+///let name = 'Andrew'
 
 if (true) {
-    // let name = 'mike'
+    //let name = 'Mike'
+
     if (true) {
-        let tname = 'Jane'
+        let name = 'Jen'
         console.log(name)
     }
 }
@@ -19,5 +17,3 @@ if (true) {
 if (true) {
     console.log(name)
 }
-
-

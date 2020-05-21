@@ -1,32 +1,28 @@
-let name = 'andrew mead'
+let name = '  Andrew Mead '
 
-// length property
+// Length property
 console.log(name.length)
 
-// convert to upper case
-
+// Convert to upper case
 console.log(name.toUpperCase())
 
+// Convert to lower case
 console.log(name.toLowerCase())
 
-
-let password = 'abc123sdfsfwer098'
+// Includes method
+let password = 'abc123asdf098'
 console.log(password.includes('password'))
 
-
-// trim method
+// Trim
 console.log(name.trim())
 
-
-// challenge 
+// Challenge area
 
 // isValidPassword
 let isValidPassword = function (password) {
-  return (password.length > 8 && password.includes('password')) 
+    return password.length > 8 && !password.includes('password')
 }
-// length is more than 8 - and it doesn't contain the word password
 
-console.log(isValidPassword('sdfsdf'))
-console.log(isValidPassword('abc123sdfsdf'))
-console.log(isValidPassword('sdfsdfsdswerpassword'))
-
+console.log(isValidPassword('asdfp'))
+console.log(isValidPassword('abc123!@#$%^&'))
+console.log(isValidPassword('asdfpasdfpoijpassword'))

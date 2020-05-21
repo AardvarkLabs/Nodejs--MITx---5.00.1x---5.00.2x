@@ -1,47 +1,37 @@
 let myBook = {
-    title : '1984', 
-    author: 'Gorge orwell',
-    pageCount: 325
+    title: '1984',
+    author: 'George Orwell',
+    pageCount: 326
 }
+
 let otherBook = {
-    title : 'New York pictures', 
-    author: 'G. Zin',
-    pageCount: 233
+    title: 'A Peoples History',
+    author: 'Howard Zinn',
+    pageCount: 723
 }
 
 let getSummary = function (book) {
     return {
-    summary: `${book.title} by ${book.author}`,
-    pageCountSummary: `${book.title} is ${book.pageCount} pages long`
+        summary: `${book.title} by ${book.author}`,
+        pageCountSummary: `${book.title} is ${book.pageCount} pages long`
     }
 }
-    /* console.log(`${book.title} by ${book.author}`)
-} */
 
-let bookSumary = getSummary(myBook)
+let bookSummary = getSummary(myBook)
 let otherBookSummary = getSummary(otherBook)
 
-console.log(bookSumary.pageCountSummary)
+console.log(bookSummary.pageCountSummary)
 
+// Challenge area
+// Create function - take fahrenheit in - return object with all three
 
-/* 
-challenge
-create function - like fahrenheit in - return  object with all three
-
-
-
-*/
-
-
-let convertFah = function (fahren) {
+let convertFahrenheit = function (fahrenheit) {
     return {
-        fahren : fahren,
-        // algorithms to calculate temperature 
-        kelvin : (fahren + 459.67) * (5/9),
-        celcius : (fahren - 32) * (5/9)
+        fahrenheit: fahrenheit,
+        kelvin: (fahrenheit + 459.67) * (5 / 9),
+        celsius: (fahrenheit - 32) * (5 / 9)
     }
 }
 
-
-let temps = convertFah(74)
+let temps = convertFahrenheit(74)
 console.log(temps)

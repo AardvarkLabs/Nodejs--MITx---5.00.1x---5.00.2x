@@ -1,35 +1,52 @@
-//arrays with 5 times
-// have a todos
-// print first and the second to olist items -> todo: walk the dog
-/* 
-const todos = ["read news", "walk the dog", "shower", "drive", "work"];
+const todos = [{
+    text: 'Order cat food',
+    completed: false
+}, {
+    text: 'Clean kitchen',
+    completed: true
+}, {
+    text: 'Buy food',
+    completed: true
+}, {
+    text: 'Do work',
+    completed: false
+}, {
+    text: 'Exercise',
+    completed: true
+}]
 
-console.log(`you have ${todos.length} todos!`);
-let firstItem = todos[0];
-let lastItem = todos[[todos.length - 1]];
-console.log(firstItem);
-console.log(lastItem);
- */
-/*
-following by Andrew mead:
-*/
+const sortTodos = function (todos) {
+    todos.sort(function (a, b) {
+        if (!a.completed && b.completed) {
+            return -1
+        } else if (!b.completed && a.completed) {
+            return 1
+        } else {
+            return 0
+        }
+    })
+}
 
-const todos = ['food', 'clean', 'cat', 'shower', 'work out']
+const deleteTodo = function (todos, todoText) {
+    const index = todos.findIndex(function (todo) {
+        return todo.text.toLowerCase() === todoText.toLowerCase()
+    })
 
-todos.splice(2,1)
-todos.push('by Coffee')
-todos.shift()
+    if (index > -1) {
+        todos.splice(index, 1)
+    }
+}
 
-console.log(`you have ${todos.length} todos!`)
+const getThingsToDo = function (todos) {
+    return todos.filter(function (todo) {
+        return !todo.completed
+    })
+}
 
-todos.forEach(function(todos,index) {
-    const num = index + 1
-    console.log(`${num}. ${todos}`)
-})
+sortTodos(todos)
+console.log(todos)
 
+// console.log(getThingsToDo(todos))
+ 
+// deleteTodo(todos, '!!buy food')
 // console.log(todos)
-//console.log('')
-/*
-console.log(`Todo: ${todos[0]}`)
-console.log(`Todo: ${todos[todos.length - 2]}`)
-*/

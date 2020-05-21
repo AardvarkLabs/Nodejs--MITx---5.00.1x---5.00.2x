@@ -1,49 +1,30 @@
-
-// === equal operator
-// !== no equal operator
-// < less than equal
-// > greater than operator
-// <= less or equal to
-// >= greater than or equal to
-
-/* let temp = 32
-
-let isFreezing = temp >  32
-
-console.log(isFreezing) */
-
-// create age set to your age
-// calculate is child
-// calculate is senior
-// print is child value
-// print to senior value
-/* 
-let myAge = 40
-
-let isChild = myAge <= 19
-let senior = myAge => 65
-
-console.log(isChild)
-console.log(senior) */
-
-
+// === - equality operator
+// !== - no equal opeartor
+// < - less than operator
+// > - greater than opeartor
+// <= - less than or equal to operator
+// >= - greater than or equal to opeartor
 
 let temp = 180
 
 if (temp <= 32) {
-    console.log('it is freezing outside')
+    console.log('It is freezing outside!')
 }
 
 if (temp >= 110) {
-    console.log('it is way too hot outside')
+    console.log('It is way to hot outside!')
 }
 
-age = 65
+// Challenge area
 
-if (age <= 7){
-    console.log('the child is under 7 or equal')
+let age = 6
+
+// If 7 or under print message about child pricing
+if (age <= 7) {
+    console.log('You will get a child discount!')
 }
 
+// If 65 or older print message about senior discount
 if (age >= 65) {
-    console.log('the person is 65 or older')
+    console.log('You will get a senior discount!')
 }

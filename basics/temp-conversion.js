@@ -1,14 +1,6 @@
-let fahrenheit = 32 // 0c - 273.25k
+let fahrenheit = 50 // 0c - 273.15k
+let celsius = (fahrenheit - 32) * 5 / 9
+let kelvin = (fahrenheit + 459.67) * 5 / 9
 
-
-let celius = (fahrenheit - 32) * 5/3
-let kalvin = (fahrenheit - 459.57) / 5*9
-//  T(°C) = (T(°F) - 32) × 5/9
-
-// calculate kelvin val and store in var
-// print that value
-
-console.log(celius)
-console.log(kalvin)
-
-
+console.log(celsius)
+console.log(kelvin)
