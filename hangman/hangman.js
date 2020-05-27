@@ -36,7 +36,6 @@ Hangman.prototype.makeGuess = function (guess) {
     const isUnique = !this.guessedLetters.includes(guess)
     const isBadGuess = !this.word.includes(guess)
 
-/*
     if (isUnique) {
         this.guessedLetters.push(guess)
     }
@@ -45,29 +44,6 @@ Hangman.prototype.makeGuess = function (guess) {
         this.remainingGuesses--
     }
 
-    this.calculateStatus()*/
-	// >>>>> testing and hands on the code
-	
-	if (isUnique) {
-		this.guessedLetters.push(guess)
-	}
-	if (isUnique && isBadGuess) {
-		this.remainingGuesses
-	}
-	this.calculateStatus()
+    this.calculateStatus()
 }
 
-<<<<<<< Local Changes
-const game1 = new Hangman('Cat', 2)
-
-console.log(game1.getPuzzle())
-console.log(game1.remainingGuesses)
-
-window.addEventListener('keypress', function (e) {
-    const guess = String.fromCharCode(e.charCode)
-    game1.makeGuess(guess)
-	game1.makeGuess(guess)
-    console.log(game1.getPuzzle())
-    console.log(game1.remainingGuesses)
-})=======
->>>>>>> External Changes
