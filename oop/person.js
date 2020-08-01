@@ -17,46 +17,28 @@ class Person {
 
         return bio
     }
-    setName(fullName) {
+    set fullName(fullName) {
         const names = fullName.split(' ')
         this.firstName = names[0]
         this.lastName = names[1]
     }
+    get fullName() {
+        return `${this.firstName} ${this.lastName}`
+    }
 }
 
 class Employee extends Person {
-	constructor(firstName, lastName, age, position, likes) {
-		super(firstNme, lastName, age, likes)
-		this.position = position
-	}
-	getBio() {
-		return `${this.firstName} ${this.lastName} is a ${this.position}.`
-	} 
-	getYearsLeft() {
-		return 65 - this.age
-	}
+    constructor(firstName, lastName, age, position, likes) {
+        super(firstName, lastName, age, likes)
+        this.position = position
+    }
+    getBio() {
+        return `${this.fullName} is a ${this.position}.`
+    }
+    getYearsLeft() {
+        return 65 - this.age
+    }
 }
-
-// ----- begin training code
-// copying this.
-
-/*
-class Employee extends Person {
-	constructor(firstName, lastName, age, position, likes) {
-		super(firstName, lastName, age, likes)
-		this.position = position
-	}
- 	getBio() {
- 		return `${this.firstName} ${this.lastName} is a ${this.position}.`
- 	}
-	getYearsLeft() {
-		return 65 - this.age
-	}
-}
-*/
-
-// ----- end training code
-
 
 class Student extends Person {
     constructor(firstName, lastName, age, grade, likes) {
@@ -72,34 +54,6 @@ class Student extends Person {
     }
 }
 
-const me = new Student('Andrew', 'Mead', 27, 88, [])
+const me = new Employee('Andrew', 'Mead', 27, 'Teacher', [])
+me.fullName = 'Clancey Turner'
 console.log(me.getBio())
-me.updateGrade(-20)
-console.log(me.getBio())
-
-// 
-// more training 
-// **** **** ***
-/*
-
-class Student extends Person {
-	constructor(firstName, lastName, age, grade, likes) {
-		super(firstName, lastName, age, likes)
-		this.grade = grade
-	}
-	updateGrade(change) {
-		this.grade += change
-	}
-	getBio() {
-		const status = this.grade >= 70 ? 'passing' : 'failing'
-		return `this.firstName is${sttus} the class.`
-	}
-}
-
-const me = new Student('Andrew', 'Mead', 27, 88, [])
-console.log(me.getBio())
-me.updateGrade(-20)
-console.log(me.getBio())
-
-
-*/
