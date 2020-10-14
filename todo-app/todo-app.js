@@ -1,32 +1,35 @@
-'use strict'
+const todos = [{
+    text: 'Order cat food',
+    completed: false
+}, {
+    text: 'Clean kitchen',
+    completed: true
+}, {
+    text: 'Buy food',
+    completed: true
+}, {
+    text: 'Do work',
+    completed: false
+}, {
+    text: 'Exercise',
+    completed: true
+}]
 
-let todos = getSavedTodos()
-
-const filters = {
-    searchText: '',
-    hideCompleted: false
-}
-
-renderTodos(todos, filters)
-
-document.querySelector('#search-text').addEventListener('input', (e) => {
-    filters.searchText = e.target.value
-    renderTodos(todos, filters)
+const incompleteTodos = todos.filter(function (todo) {
+    return !todo.completed
 })
 
-document.querySelector('#new-todo').addEventListener('submit', (e) => {
-    e.preventDefault()
-    todos.push({
-        id: uuidv4(),
-        text: e.target.elements.text.value,
-        completed: false
-    })
-    saveTodos(todos)
-    renderTodos(todos, filters)
-    e.target.elements.text.value = ''
+const summary = document.createElement('h2')
+summary.textContent = `You have ${incompleteTodos.length} todos left`
+document.querySelector('body').appendChild(summary)
+
+todos.forEach(function (todo) {
+    const p = document.createElement('p')
+    p.textContent = todo.text
+    document.querySelector('body').appendChild(p)
 })
 
-document.querySelector('#hide-completed').addEventListener('change', (e) => {
-    filters.hideCompleted = e.target.checked
-    renderTodos(todos, filters)
+// Listen for new todo creation
+document.querySelector('button').addEventListener('click', function (e) {
+    console.log('Add a new todo...')
 })
